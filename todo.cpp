@@ -5,12 +5,10 @@
 #include "todo.h"
 using namespace std;
 
-void ReadTasksFromFile()
-{
+void ReadTasksFromFile() {
     ifstream file("storage.txt");
     string line;
-    if (!file)
-    {
+    if (!file) {
         cout << "Fayl ochilmadi yoki mavjud emas!" << endl;
         return;
     }
@@ -20,10 +18,22 @@ void ReadTasksFromFile()
         cout << "Hozirda sizda vazifalar mavjud emas!" << endl;
         return;
     }
-    while (getline(file, line))
-    {
+    while (getline(file, line)) {
         
         cout << count++ << ". " << line << endl;
     }
     file.close();
+}
+void AddTaskToFile() {
+    cout << "Yangi vazifa nomini kiritin\n>>>>";
+    string task;
+    getline(cin , task);
+    ofstream file("storage.txt");
+    if(!file) {
+        cout <<"File ochilmadi yoki mavjud emas !" << endl;
+        return;
+    }
+    file << task << endl;
+    file.close();
+    cout << "Vazifa muvaffaqiyatli qo'shildi " << endl;
 }

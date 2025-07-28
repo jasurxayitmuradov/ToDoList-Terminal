@@ -12,12 +12,10 @@ int main()
     int n;
     cin >> n;
 
-    if( n == 1)
-    {
+    if( n == 1) {
         ReadTasksFromFile();
-    }else if( n ==  2)
-    {
-        
+    }else if( n ==  2) {
+        AddTaskToFile();
     }
 
 
