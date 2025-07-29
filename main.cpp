@@ -3,24 +3,17 @@
 using namespace std;
 int main()
 {
-    cout << "TO DO LISTINGIZGA XUSH KELIBSIZ !👇" << endl;
-    cout << "Vazifalarni ko'rish (1)" << endl;
-    cout << "Yangi vazifa qo'shish (2)" << endl;
-    cout << "Chiqish (0)" << endl;
-    cout << "Kiriting: ";
-    
-    int n;
-    cin >> n;
+    do {
+    int n = MainMenu();
 
     if( n == 1) {
         ReadTasksFromFile();
     }else if( n ==  2) {
         AddTaskToFile();
+    }else if( n != 0) {
+      cout << "Noto'g'ri tanlov\n";
     }
 
-
-
-
-
+    }while(true);
 
 }

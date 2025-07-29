@@ -1,7 +1,8 @@
 #ifndef TODO_H
 #define TODO_H
 
-void ReadTasksFromFile();
-void AddTaskToFile();
-
+int ReadTasksFromFile();
+int AddTaskToFile();
+int MainMenu();
+int chiqish();
 #endif
